@@ -50,10 +50,10 @@ while Run:
                     counter += 1
                 
             from sklearn.metrics import accuracy_score,precision_score,recall_score ,f1_score
-            print('\n       Accuracy is %f Percent' %accuracy_score(Y_test,y_pred))
-            print('\n       Precision score is %f Percent' %precision_score(Y_test,y_pred))
-            print('\n       Recall Score is %f Percent' %recall_score(Y_test,y_pred))
-            print('\n       F1-score is %f Percent' %f1_score(Y_test, y_pred))
+            print('\n       Accuracy is %f Percent' %(accuracy_score(Y_test,y_pred)*100))
+            print('\n       Precision score is %f Percent' %(precision_score(Y_test,y_pred)*100))
+            print('\n       Recall Score is %f Percent' %(recall_score(Y_test,y_pred)*100))
+            print('\n       F1-score is %f Percent' %(f1_score(Y_test, y_pred)*100))
             delta= t2-t1
             testingtime=int(delta.total_seconds()*1000) 
             print("\n Testimg time of model is ", testingtime, "miliseconds")
